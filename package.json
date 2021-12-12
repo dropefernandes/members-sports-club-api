@@ -1,0 +1,8 @@
+{
+  "name": "members-sports-club-api",
+  "version": "1.0.0",
+  "description": "API for registering members of a sports club",
+  "main": "index.js",
+  "author": "Pedro Fernandes <pf95_@hotmail.com>",
+  "license": "MIT"
+}
