@@ -4,5 +4,23 @@
   "description": "API for registering members of a sports club",
   "main": "index.js",
   "author": "Pedro Fernandes <pf95_@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "http-status": "^1.5.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-beta.3",
+    "sequelize-cli": "^6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "nodemon": "^2.0.15"
+  }
 }
