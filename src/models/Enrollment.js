@@ -51,8 +51,8 @@ module.exports = (sequelize, DataTypes) => {
 	})
 
 	Enrollment.associate = models => {
-		Enrollment.belongsTo(models.MEMBER)
-		Enrollment.belongsTo(models.SPORT)
+		Enrollment.belongsTo(models.MEMBER, { as: 'memberId' })
+		Enrollment.belongsTo(models.SPORT, { as: 'sportId' })
 	}
 
 	return Enrollment

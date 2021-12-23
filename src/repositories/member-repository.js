@@ -13,7 +13,7 @@ class MemberRepository {
 	}
 
 	async findById (id) {
-		return await this.Member.findAll({
+		return await this.Member.findOne({
 			where: {
 				id: id
 			}

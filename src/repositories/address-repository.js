@@ -5,7 +5,15 @@ class AddressRepository {
 	}
 
 	async save (data) {
-		return this.Address.create(data)
+		return await this.Address.create(data)
+	}
+
+	async findById (id) {
+		return await this.Address.findOne({
+			where: {
+				id: id
+			}
+		})
 	}
 }
 

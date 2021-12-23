@@ -1,6 +1,6 @@
 const FindAllMembersUseCase = require('./findAllMembersUseCase')
 
-class CreateMemberController {
+class FindAllMembersController {
 
 	constructor(app) {
 		this.findAllMembersUseCase = new FindAllMembersUseCase(app)
@@ -16,4 +16,4 @@ class CreateMemberController {
 	}
 }
 
-module.exports = CreateMemberController
+module.exports = FindAllMembersController

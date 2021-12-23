@@ -7,6 +7,7 @@ const FindAllSportsController = require('./usecases/sport/findAllSportsControlle
 const CreateMemberController = require('./usecases/member/createMemberController')
 const GetEnrollmentByMemberController = require('./usecases/member/enrollment/getEnrollmentByMemberController')
 const FindAllMembersController = require('./usecases/member/findAllMembersController')
+const FindMemberByIdController = require('./usecases/member/findMemberByIdController')
 
 // enrollment
 const CreateEnrollmentController = require('./usecases/member/enrollment/createEnrollmentController')
@@ -16,6 +17,7 @@ module.exports = (app) => {
 	const createMemberController = new CreateMemberController(app)
 	const findAllMembersController = new FindAllMembersController(app)
 	const getEnrollmentByMemberController = new GetEnrollmentByMemberController(app)
+	const findMemberByIdController = new FindMemberByIdController(app)
 	
 	const createSportController = new CreateSportController(app)
 	const findSportByIdController = new FindSportByIdController(app)
@@ -26,6 +28,9 @@ module.exports = (app) => {
 	app.route('/api/v1/members')
 		.post((request, response) => createMemberController.execute(request, response))
 		.get((request, response) => findAllMembersController.execute(request, response))
+
+	app.route('/api/v1/members/:id')
+		.get((request, response) => findMemberByIdController.execute(request, response))
 	
 	app.route('/api/v1/members/:id/enrollments')
 		.get((request, response) => getEnrollmentByMemberController.execute(request, response))

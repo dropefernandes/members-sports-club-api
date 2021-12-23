@@ -2,10 +2,11 @@ class EnrollmentRepository {
 
 	constructor(app) {
 		this.Enrollment = app.datasource.models.ENROLLMENT
+		this.app = app
 	}
 
 	async save (data) {
-		return this.Enrollment.create(data)
+		return await this.Enrollment.create(data)
 	}
 
 	async getByMember (memberId) {
@@ -13,7 +14,7 @@ class EnrollmentRepository {
 		return await this.Enrollment.findAll({
 			where: {
 				memberId: memberId
-			}
+			},
 		})
 	}
 }
