@@ -3,7 +3,7 @@
 API for registering members of a sports club
 
 ### install dependencies
-`yarn install`
+`yarn`
 
 ### run app
 `yarn start`
